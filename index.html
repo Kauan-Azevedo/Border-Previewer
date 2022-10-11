@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Border Previewer</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header-logo">Border Previewer</h1>
+        <nav class="header-navbar">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="box-item" id="box-item"></div>
+        <div class="options">
+            <label for="border" class="options-label">Border
+                <input class="options-label-input" type="number" name="border" id="border" onkeydown="applyStyle()"
+                    onkeyup="applyStyle()">
+            </label>
+
+            <label for="border-radius" class="options-label">Border-radius
+                <input class="options-label-input" type="number" name="border-radius" id="border-radius"
+                    onkeydown="applyStyle()" onkeyup="applyStyle()">
+            </label>
+            <label for="border-color" class="options-label">Border-color
+                <input class="options-label-input" type="text" name="border-color" id="border-color"
+                    onkeydown="applyStyle()" onkeyup="applyStyle()">
+            </label>
+            <div class="options-btn">
+                <button class="btn-apply" onclick="applyStyle()">
+                    Aplicar
+                </button>
+                <button class="btn-adv-options" onclick="toggleAdv()">
+                    Opções avançadas
+                </button>
+            </div>
+        </div>
+        <div class="advanced-options" id="advOptions">
+            <label class="options-label" for="width">Width
+                <input type="number" id="width" name="width" onkeydown="advStyle()" onkeyup="advStyle()">
+            </label>
+            <label class="options-label" for="height">Height
+                <input type="number" id="height" name="width" onkeydown="advStyle()" onkeyup="advStyle()">
+            </label>
+            <label class="options-label" form="background" for="background">Background-color
+                <input type="text" id="background" name="background" onkeydown="advStyle()" onkeyup="advStyle()">
+            </label>
+            <label class="options-label" form="background" for="shadow">Box-shadow
+                <input type="text" id="box-shadow" name="box-shadow" onkeydown="advStyle()" onkeyup="advStyle()">
+            </label>
+        </div>
+    </main>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
